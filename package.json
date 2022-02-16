@@ -6,8 +6,8 @@
   "scripts": {
     "test:watch": "jest --watchAll",
     "start": "nodemon server.js",
-    "lint": "eslint '**/*.js' --fix --ignore-pattern node_modules/",
-    "format": "prettier --write '**/*.js'"
+    "lint": "eslint --ext .js src/",
+    "format": "prettier --write --ext .js src/"
   },
   "author": "",
   "license": "ISC",
@@ -21,14 +21,14 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
     "prettier": "2.5.1",
     "tap": "^15.1.6"
   },
-  "eslintIgnore" : [
+  "eslintIgnore": [
     "*.test.js",
     "*.spec.js"
   ]
-
 }

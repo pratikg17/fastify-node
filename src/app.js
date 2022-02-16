@@ -1,6 +1,5 @@
 const fastify = require('fastify');
 
-const a = 10;
 const build = (opts = {}) => {
   const app = fastify(opts);
 
