@@ -12,8 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "db-migrate": "^0.11.13",
+    "db-migrate-pg": "^1.2.2",
     "fastify": "^3.27.1",
+    "fastify-plugin": "^3.0.1",
     "nodemon": "^2.0.15",
+    "pg-promise": "^10.11.1",
     "pino-pretty": "^7.5.1"
   },
   "devDependencies": {
