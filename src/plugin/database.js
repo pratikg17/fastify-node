@@ -8,6 +8,7 @@ const db = async (fastify, options, next) => {
   const dbConnection = pgp(config.database_uri);
   // register db as decorator to provide globally
   fastify.decorate('db', dbConnection);
+  console.log(config.database_uri);
 
   fastify.log.info('Migration is about to start');
   const migrationCount = await applyMigration();

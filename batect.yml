@@ -14,7 +14,7 @@ containers:
 
   # Postgres sql container
   db:
-    image: postgres:10.5
+    image: postgres:14
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: app
