@@ -1,6 +1,6 @@
 const DBMigrate = require('db-migrate');
 
-export const applyMigration = () => {
+const applyMigration = () => {
   return new Promise((resolve, reject) => {
     const dbMigrate = DBMigrate.getInstance(true);
     dbMigrate.silence(true);
