@@ -39,11 +39,9 @@ tasks:
       environment:
         PORT: 8080
         POSTGRES_URI: postgres://app:password@db/db
-        # protocol://username:password@container_name/<database_name>
       container: build-fastify-env
       command: npm run start
       ports:
         - 5000:8080
-        # Port outside on machine : port on the docker machine
     dependencies:
       - db
