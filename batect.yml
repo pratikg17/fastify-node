@@ -15,6 +15,9 @@ containers:
   # Postgres sql container
   db:
     image: postgres:14
+    volumes:
+      - local: ./postgres-data
+        container: /var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: app

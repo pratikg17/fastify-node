@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:watch": "jest --watchAll",
-    "start": "nodemon server.js",
+    "start": "nodemon --legacy-watch server.js",
     "lint": "eslint --ext .js src/",
     "format": "prettier --write --ext .js src/"
   },
