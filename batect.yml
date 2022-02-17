@@ -28,14 +28,19 @@ containers:
   # Postgres sql container
   db-test:
     image: postgres:14
-    # ports:
-    #   - 5432:5432
+    ports:
+      - 5431:5432
     environment:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: app
       POSTGRES_DB: db
 
 tasks:
+  start-test-db:
+    description: start test database
+    run:
+      container: db-test
+
   say-hello:
     description: Say hello to the nice person reading the Batect documentation
     run:
