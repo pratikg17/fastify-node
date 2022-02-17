@@ -1,13 +1,8 @@
 const dao = (fastify) => {
-  const getAll = () => {
-    return fastify.db.query('select * from test');
-  };
+  const getAll = () => fastify.db.query('select * from test');
 
-  const save = (title) => {
-    return fastify.db.one('INSERT INTO test(title) VALUES($1) RETURNING id', [
-      title,
-    ]);
-  };
+  const save = (title) =>
+    fastify.db.one('INSERT INTO test(title) VALUES($1) RETURNING id', [title]);
 
   return {
     getAll,
