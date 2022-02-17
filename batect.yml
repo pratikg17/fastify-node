@@ -36,6 +36,10 @@ containers:
       POSTGRES_DB: db
 
 tasks:
+  start-dev-db:
+    description: start dev. database
+    run:
+      container: db
   start-test-db:
     description: start test database
     run:
