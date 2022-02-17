@@ -13,7 +13,7 @@ const build = (opts = {}) => {
 
   app.get('/', async (request, reply) => {
     reply.code(200).send({
-      hello: 'world!',
+      hello: 'world! done CI CD',
     });
   });
 
