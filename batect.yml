@@ -25,6 +25,16 @@ containers:
       POSTGRES_USER: app
       POSTGRES_DB: db
 
+  # Postgres sql container
+  db-test:
+    image: postgres:14
+    # ports:
+    #   - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: app
+      POSTGRES_DB: db
+
 tasks:
   say-hello:
     description: Say hello to the nice person reading the Batect documentation
@@ -50,3 +60,14 @@ tasks:
         - 5000:8080
     dependencies:
       - db
+
+  test-watch:
+    description: test running in watch node
+    run:
+      container: build-fastify-env
+      environment:
+        PORT: 8080
+        POSTGRES_URI: postgres://app:password@db-test/db
+      command: npm run test:watch
+    dependencies:
+      - db-test

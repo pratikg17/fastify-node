@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:watch": "jest --watchAll",
+    "test:watch": "jest --watchAll --detectOpenHandles --runInBand",
     "start": "nodemon --legacy-watch server.js",
     "lint": "eslint --ext .js src/",
     "format": "prettier --write --ext .js src/"
