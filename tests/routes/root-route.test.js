@@ -12,6 +12,6 @@ describe('Root Route', () => {
   it('should return 200 when root route', async () => {
     const res = await app.inject({ url: '/' });
     expect(res.statusCode).toBe(200);
-    expect(res.json()).toEqual({ hello: 'world!' });
+    expect(res.json()).toEqual({ hello: 'world! done CI/CD' });
   });
 });
