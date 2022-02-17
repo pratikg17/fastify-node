@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start-prod": "node server.js",
+    "start": "nodemon --legacy-watch server.js",
     "test:watch": "jest --watchAll --detectOpenHandles --runInBand",
     "test": "CI=true jest --coverage --detectOpenHandles --runInBand",
-    "start": "nodemon --legacy-watch server.js",
     "lint": "eslint --ext .js src/",
     "lint:fix": "eslint --ext --fix .js src/",
     "format": "prettier --write --ext .js src/"
