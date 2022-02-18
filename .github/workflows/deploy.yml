@@ -2,9 +2,9 @@ name: Fastify Application
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -16,8 +16,8 @@ jobs:
       - name: Install Fastify Dependencies
         run: ./batect install-dep
 
-      - name: Run testcase
-        run: ./batect test-ci
+      # - name: Run testcase
+      #   run: ./batect test-ci
 
       - name: Perform Linting
         run: ./batect lint
