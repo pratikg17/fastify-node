@@ -21,7 +21,6 @@ const jobRepository = (db) => {
 
       return id;
     } catch (error) {
-      console.log(error);
       throw Error('Faild to save in db');
     }
   };
