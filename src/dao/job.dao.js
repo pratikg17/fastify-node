@@ -5,8 +5,7 @@ const jobRepository = (db) => {
   const save = async (job) => {
     try {
       const { id } = await db.one(
-        `
-            INSERT INTO jobs(title, description, skills, min_budget, max_budget, expired_at, user_id)
+        `INSERT INTO jobs(title, description, skills, min_budget, max_budget, expired_at, user_id)
             values($1,$2, $3, $4, $5, $6, $7) RETURNING id
           `,
         [
@@ -22,6 +21,7 @@ const jobRepository = (db) => {
 
       return id;
     } catch (error) {
+      console.log(error);
       throw Error('Faild to save in db');
     }
   };
