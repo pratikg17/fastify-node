@@ -63,6 +63,7 @@ tasks:
       environment:
         PORT: 8080
         POSTGRES_URI: postgres://app:password@db-test/db
+        JWT_SECRET: supersecretvalue
       command: npm run test
     dependencies:
       - db-test
@@ -78,6 +79,7 @@ tasks:
       environment:
         PORT: 8080
         POSTGRES_URI: postgres://app:password@db/db
+        JWT_SECRET: supersecretvalue
       container: build-fastify-env
       command: npm run start
       ports:
@@ -92,6 +94,7 @@ tasks:
       environment:
         PORT: 8080
         POSTGRES_URI: postgres://app:password@db-test/db
+        JWT_SECRET: supersecretvalue
       command: npm run test:watch
     dependencies:
       - db-test

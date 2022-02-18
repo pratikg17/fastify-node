@@ -7,4 +7,5 @@ const loadEnvironmentVariable = (envName) => {
 
 module.exports = {
   database_uri: loadEnvironmentVariable('POSTGRES_URI'),
+  jwt_token: loadEnvironmentVariable('JWT_SECRET'),
 };

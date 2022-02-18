@@ -12,7 +12,7 @@ const jobRoute = async (fastify) => {
     async (request, reply) => {
       // authenticate request
       // append user request.user
-      // await fastify.authenticate(request, reply);
+      await fastify.authenticate(request, reply);
 
       const { limit, offset } = request.query;
 
@@ -40,7 +40,7 @@ const jobRoute = async (fastify) => {
     },
     async (request, reply) => {
       // authenticate request
-      // await fastify.authenticate(request, reply);
+      await fastify.authenticate(request, reply);
 
       const job = request.body;
 

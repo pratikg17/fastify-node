@@ -1,4 +1,5 @@
 const userRepository = (db) => {
+  // Get user by user id
   const getUserById = async (userId) => {
     try {
       const user = await db.one('select * from users where id = $1', [userId]);
